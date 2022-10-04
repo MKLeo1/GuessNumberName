@@ -7,7 +7,7 @@ public:
 
     Random_number_generator();
     Random_number_generator(int);
-    ~Random_number_generator();
+    ~Random_number_generator() = default;
 
     int draw_won_number(unsigned int &);
 };

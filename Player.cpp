@@ -28,12 +28,12 @@ unsigned int Player::make_a_bet()
 void Player::lost_bet()
 {
     player_coins -= amount_bet_by_player;
-    std::cout << "Player " << Player::name << " lost! ";
+    std::cout << "Player " << Player::name << " lost! " << "/n";
 }
 void Player::won_bet()
 {
     player_coins += amount_bet_by_player;
-    std::cout << "Player " << Player::name << " won!";
+    std::cout << "Player " << Player::name << " won!" << "/n";
 }
 int Player::get_player_coins()
 {

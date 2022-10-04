@@ -3,7 +3,7 @@
 
 class Player
 {
-    std::string name = "";
+    std::string name;
     int player_coins = {0};
     unsigned int amount_bet_by_player = {0};
     unsigned int number_bet_by_player = {0};
