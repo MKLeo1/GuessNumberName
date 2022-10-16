@@ -1,5 +1,4 @@
 #include "Bet.h"
-#include "Player_creator.h"
 
 void Bet::accept_bets_from_players(std::vector<std::unique_ptr<Player>> &vector_of_players)
 {
@@ -21,11 +20,13 @@ void Bet::settle_bets(int won_number, std::vector<std::unique_ptr<Player>> &vect
             vector_of_players[i]->lost_bet();
             if (vector_of_players[i]->get_player_coins() <= 0)
             {
-                std::cout << "Player " << vector_of_players[i]->get_player_name() << " lost all money!" << "/n";
+                std::cout << "Player " << vector_of_players[i]->get_player_name() << " lost all money!"
+                          << "/n";
                 vector_of_players.erase(vector_of_players.begin() + i);
                 if (vector_of_players.empty())
                 {
-                    std::cout << "All players lost!" << "/n";
+                    std::cout << "All players lost!"
+                              << "/n";
                 }
             }
         }
